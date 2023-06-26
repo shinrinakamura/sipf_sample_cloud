@@ -5,8 +5,10 @@ sudo apt update
 bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
 
 # Installation of required nodes
+cd .node-red
 npm install node-red-contrib-influxdb
 npm install node-red-dashboard
+cd ..
 
 # Launch the application
 sudo systemctl start nodered.service
