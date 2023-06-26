@@ -20,6 +20,11 @@ sudo apt update
 sudo apt install -y influxdb
 sudo systemctl start influxdb
 sudo apt install -y influxdb-client
+# ceate database
+influx
+CREATEDATABASE EnvironData
+exit
+
 
 # install grafana
 sudo apt-get install -y apt-transport-https
