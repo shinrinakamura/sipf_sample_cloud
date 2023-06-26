@@ -23,7 +23,7 @@ sudo apt install -y influxdb
 sudo systemctl start influxdb
 sudo apt install -y influxdb-client
 # ceate database
-influx -execute 'CREATEDATABASE EnvironData'
+influx -execute 'CREATE DATABASE EnvironData'
 
 # install grafana
 sudo apt-get install -y apt-transport-https
