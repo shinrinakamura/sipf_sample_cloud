@@ -17,12 +17,11 @@ sudo systemctl enable nodered.service
 # install influxdb
 sudo curl -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add -
 sudo echo "deb https://repos.influxdata.com/ubuntu bionic stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
-sudo echo "deb https://repos.influxdata.com/ubuntu bionic stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
 sudo apt update
 sudo apt install -y influxdb
-sudo systemctl start influxdb
 sudo apt install -y influxdb-client
-# ceate database
+sudo systemctl start influxdb
+# create database
 influx -execute 'CREATE DATABASE EnvironData'
 
 # install grafana
